@@ -1,0 +1,61 @@
+\section{Daten für das Honigbuch}
+Dieser Teil der Ideensammlung betrifft die Daten, die für die Führung des Honigbuchs benötigt werden. Sie umfassen die kompletten Arbeitsschritte, vom Schleudern über das Vermischen, das Abfüllen bis zum Verkauf. 
+
+\subsection{Ablauf der Honigernte}
+Bei der Honigernte durch Schleuderung, Auspressen oder Tropfenlassen werden Honigwaben von einem oder mehreren Völkern abgeerntet und in ein oder mehrere Lagergebinde gefüllt.
+
+Diese Lagergebinde werden nun gelagert oder der Honig wird nachbereitet. Nachbereitet wird er, in dem er gerührt wird und somit eine cremige Konsistenz erlangt oder mehrere Lagergebinde werden gemischt und widerum in ein Lagergebinde gefüllt bzw. gerührt.
+ 
+Durch die Abfüllung wird ein Lagergebinde in die Verkaufsgebinde gefüllt. \bigskip 
+
+Zur Dokumentation sind hierfür folgende Daten zu speichern:
+\subsection{Datenbanken} 
+\index{Datenbanken}
+\begin{enumerate}
+\item \label{DBschl}  \textbf{Schleuderung}\index{Schleuderung}
+\begin{itemize}
+\item eindeutige Kennzeichnung für die Schleuderung [Primärschlüssel]
+\item Datum der Schleuderung
+\item Kennzeichnung Herkunft des Honigs [Fremdschlüssel]
+\item Besonderheiten/Bemerkungen
+\end{itemize}
+\item \textbf{Gebinde}\label{DBgeb}\index{Gebinde}
+\begin{itemize}
+\item eindeutige Kennzeichnung für das Gebinde [Primärschlüssel]
+\item Typ des Gebindes [Fremdschlüssel]
+\item Benennung des Gebindes 
+\item Kennzeichen des Zustands [Fremdschlüssel]
+\end{itemize}
+\item \textbf{Gebindetyp}\label{DBgebt}\index{Gebindetyp}
+\begin{itemize}
+\item eindeutige Kennzeichnung für Gebindetyp [Primärschlüssel]
+\item nähere Angaben zum Gebindetyp
+\begin{itemize}
+\item Volumen
+\item Gewicht
+\item Material
+\item Warenzeichen
+\end{itemize}
+\end{itemize}
+\item \textbf{Gebindezustand}\label{DBgebz}\index{Gebindezustand}
+\begin{itemize}
+\item eindeutige Kennzeichnung für Gebindezustand [Primärschlüssel]
+\item Erläuterung des Schlüssels
+\begin{description}
+\item[L] leer
+\item[T] teilweise gefüllt
+\item[V] voll
+\end{description}
+\end{itemize}
+\item \textbf{Gebindeverwendung}\label{DBgebv}\index{Gebindeverwendung}
+\begin{itemize}
+\item Kennzeichnung der Gebinde/Schleuderung-Zuordnung [Primärschlüssel]
+\item Schleuderung [Fremdschlüssel]
+\item Gebinde [Fremdschlüssel]
+\item Wassergehalt
+\end{itemize}
+\end{enumerate}
+\subsection{Bearbeitungshinweise}\index{Bearbeitungshinweise}
+\begin{itemize}
+\item Beim Anlegen einer Schleuderung (s.o.) ist darauf zu achten, dass der Gebindezustand (s.o.) auf jeden Fall zu bearbeiten ist.
+\end{itemize}
